@@ -14,12 +14,35 @@
     
 }
 
-header div{
-    width: 100%;
-    background-color: #fffcf5;
-    text-align: center;
 
+.contenedor-header{ 
+    display: flex;
+    background-color: #fffcf5;
+    justify-content: center;
+    align-items: center;
+    
 }
+
+.contenedor-header div {
+    margin: 20px;
+}
+
+.botones{
+    position: relative;
+    left: 400px; 
+}
+
+
+header div button {
+    background-color:burlywood;
+    width: 50px;
+    border-radius: 50%;
+    padding: 10px 0px;
+    border: 0;
+    
+}
+
+
 header div img{
    max-width: 100%;
    width: 300px;
@@ -215,7 +238,7 @@ h2{
 
 
 /* Codigo de Lau - Grid */
-.titulo {
+.titulo-principal {
     background-image: url(../assets/madera.jpg);
     font-size: 3rem;
     width: 80%;  
@@ -223,78 +246,151 @@ h2{
     text-align: center;
 }
 
-.grilla {
+.contenedor-productos {
     max-width: 1200px;
     width: 80%;
     margin: 0 auto;
     display: grid;
     grid-gap: 15px;
     justify-content: center ;
-    grid-template-areas: "prod1 prod2 prod3"
-                        "prod4 prod5 prod6";
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.grilla .producto1 {
-    background-color:rgb(223, 189, 137);
-    grid-area: prod1;
-    text-align: center;
-    border: 5px solid black;
-}
-.grilla .producto1 img {
+.producto-imagen {
     height: 280px;
     box-sizing: cover;
-}
-.grilla .producto2 {
-    background-color:rgb(223, 189, 137);
-    grid-area: prod2;
-    text-align: center;
-    border: 5px solid black;
-}
-.grilla .producto2 img {
-    height: 280px;
-    box-sizing: cover;
-}
-.grilla .producto3 {
-    background-color:rgb(223, 189, 137);
-    grid-area: prod3;
-    text-align: center;
-    border: 5px solid black;
-}
-
-.grilla .producto3 img {
-    height: 280px;
-    box-sizing: cover;
-}
-.grilla .producto4 {
-    background-color:rgb(223, 189, 137);
-    grid-area: prod4;
-    text-align: center;
-    border: 5px solid black;
-} 
-.grilla .producto4 img {
-    height: 320px;
-    box-sizing: cover;
-}
-.grilla .producto5 {
-    background-color:rgb(223, 189, 137);
-    grid-area: prod5;
-    text-align: center;
-    border: 5px solid black;
-} 
-.grilla .producto5 img {
-    height: 320px;
-    box-sizing: cover;
-}
-.grilla .producto6 {
-    background-color:rgb(223, 189, 137);
-    grid-area: prod6;
-    text-align: center;
-    border: 5px solid black;
-} 
-.grilla .producto6 img {
-    height: 320px;
-    box-sizing: cover;
-} 
+}  
 
 
 
+
+/*Watsapp*/
+.btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 60px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wsp{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
+}
+
+
+/*Carrito*/
+
+
+.contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0rem 10rem;
+}
+
+.carrito-vacio,
+.carrito-comprado {
+    color: black;
+}
+
+.carrito-productos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.carrito-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#ddf779;
+    color: black;
+    padding: .5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+}
+
+.carrito-producto-imagen {
+    width: 4rem;
+    border-radius: 1rem;
+}
+
+.carrito-producto small {
+    font-size: .75rem;
+}
+
+.carrito-producto-eliminar {
+    border: 0;
+    background-color:transparent;
+    color: black;
+    cursor: pointer;
+}
+
+.carrito-acciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrito-acciones-vaciar {
+    border: solid ;
+    background-color: var(--clr-gray);
+    padding: 1rem;
+    border-radius: 2rem;
+    color:black;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: chartreuse;
+}
+
+.carrito-acciones-derecha {
+    display: flex;
+}
+
+.carrito-acciones-total {
+    display: flex;
+    background-color: var(--clr-gray);
+    padding: 1rem;
+    color: var(--clr-main);
+    text-transform: uppercase;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    gap: 1rem;
+}
+
+.carrito-acciones-comprar {
+    border: 0;
+    background-color: var(--clr-main);
+    padding: 1rem;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.header-mobile {
+    display: none;
+}
+
+.close-menu {
+    display: none;
+}
+
+.disabled {
+    display: none;
+}
