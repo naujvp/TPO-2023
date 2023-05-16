@@ -5,11 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
+    <script src="https://kit.fontawesome.com/3bc49ffe58.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" 
+    crossorigin="anonymous"></script>
+    <link rel="icon" href="../assets/iconos/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
     <title>Indumentaria</title>
 </head>
 <body>
+    
     <header>
-        <div class="logo"><img src="../assets/logo/logo (1).png" alt=""></div>
+        <div class="contenedor-header">
+            <div class="logo"><img src="../assets/logo/logo.png" alt="logo"></div>
+            <div class="botones">
+                
+                <button onclick="location.href='carrito.html'" >
+                    <i class="fa-solid fa-cart-shopping fa-xl"></i><span id="numerito" class="numerito">0</span>
+                </button>
+                <button onclick="location.href='contacto.html'">
+                    <i class="fa-sharp fa-regular fa-envelope fa-xl"></i>
+                </button>
+            </div></div>
         <nav>
             <ul>
                 <li class="inicio"><a href="../index.html">Inicio</a></li>
@@ -18,85 +36,55 @@
     </header>
 
     <main>
-        <h2 class="titulo">Indumentaria</h2>
-        <div class="grilla">
-           <div class="producto1">
-               <img src="../assets/indumentaria/alpargata.jpg" alt="prod1">
-               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam id voluptatem iusto nesciunt nobis aliquam dicta tenetur et possimus, cum optio laboriosam velit quaerat ullam doloribus perspiciatis nostrum omnis minima!</p>
-               <p>Precio1</p>
-           </div>
-           <div class="producto2">
-               <img src="../assets/indumentaria/alpargata2.jpg" alt="prod2">
-               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore odio eaque eum cumque ab exercitationem, provident voluptatem. Iusto labore amet alias nobis, doloremque inventore doloribus vitae dolore voluptatem nihil eum?</p>
-               <p>Precio2</p>
-           </div>
-           <div class="producto3">
-               <img src="../assets/indumentaria/bombacha.jpg" alt="prod3">
-               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui enim omnis placeat nostrum modi suscipit deleniti provident ut quibusdam, architecto dicta fugit alias sunt quas quod consequatur culpa rerum quos!</p>
-               <p>Precio3</p>
-           </div>
-           <div class="producto4">
-               <img src="../assets/indumentaria/bombacha2.jpg" alt="prod4">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quasi reprehenderit excepturi eaque cumque tempora quo quaerat repellendus eius fugit, ab illum eos illo itaque! Earum facere dicta nobis beatae?</p>
-               <p>Precio4</p>
-           </div>
-           <div class="producto5">
-                <img src="../assets/indumentaria/poncho.jpg" alt="prod5">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur in cum dolorum eum nostrum rerum quibusdam magni temporibus, minima corporis, odio incidunt dolorem possimus facere adipisci voluptate sint explicabo impedit!</p>
-                <p>Precio5</p>
-            </div>
-            <div class="producto6">
-                <img src="../assets/indumentaria/poncho2.jpg" alt="prod6">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odit aliquid quidem provident, distinctio, quia obcaecati cumque harum nostrum aliquam explicabo at. Laborum deserunt, velit odit aspernatur nostrum eaque. Ipsum?</p>
-                <p>Precio6</p>
-            </div>
+        <h2 class="titulo-principal" id="titulo-principal">Indumentaria</h2>
+
+        <div class="contenedor-productos" id="contenedor-productos"><!--antes era "grilla"!-->
+           <!--se rellena con js!-->
         </div>
    </main> 
    
    <footer>
     <section class="footer1">
-    <div>
-        <h3><img class="icon" src="../assets/iconos/telefono.svg" alt="Contacto"> <b>Contacto</b></h3>
-        <ul>
-            <li>Teléfono:</li>
-            <li>Email:</li>
-            <li>SMS:</li>
-            <li>Dirección:</li>
-        </ul>
-    </div>
-    <div>
-        <h3><img class="icon" src="../assets/iconos/clip.svg" alt="Contacto"> <b>De interés
-        </b></h3>
-        <ul>
-            <li>Reglamento general</li>
-            <li>Preguntas frecuente</li>
-            <li>Línea ética</li>
-            <li>Lugares y horarios de atención</li>
-            <li>Trabajá con nosotros</li>
-        </ul>
-    </div>
-    <div>
-        <h3><img class="icon" src="../assets/iconos/principal.svg" alt="Contacto"> <b>Acceso principales</b></h3>
-        <ul>
-            <li>Mi cuenta</li>
-            <li>Canales de contacto</li>
-            <li>Proveedores</li>
-            <li>Protocolos</li>
-        </ul>
-    </div>
-</section>
-<section class="footer2">
-    <div>
-       <p>Ayuda     Políticas de Uso y Privacidad de Datos </p>   
-        <p>© 2020 Copyright EDET S.A - Empresa de Distribución Eléctrica de Tucumán S.A.</p>
-    </div>
-    <div class="ultimotext">
-        <h3>SISTEMA DE GESTIÓN DE LA CALIDAD</h3>
-        <p> Certificación conforme a la Norma ISO 9001:2015 en los procesos de:Toma de Lectura, Facturación, Impresión y Entrega de Facturas.
-            </p>
-    </div>
-</section>
-</footer>
+        <div class="primeracolumna">
+            <img class="logo1" src="../assets/logo/logo.png" alt="logo"> 
+            <img class="icon" src="../assets/iconos/facebook.ico" alt="Facebook"> 
+            <img class="icon" src="../assets/iconos/Instagram.ico" alt="Instagram"> 
+            <p><i><b>Lo Nuestro</b></i></p>
+        </div>    
+        <div class="segundacolumna">
+            <h3><img class="icon" src="../assets/iconos/telefono.svg" alt="Contacto"> <b>Contacto</b></h3>
+            <ul class="items">
+                <li>Tandil - Buenos Aires - Argentina</li>
+                <li>Sucursal | Payro 871</li>
+                <li>Tel.: 249 401 0150</li>
+                <li>Correo: lo.nuestro@gmail.com</li>
+            </ul>
+        </div>
+        <div class="segundacolumna">
+            <h3><img class="icon" src="../assets/iconos/clip.svg" alt="interes"> <b>Información de interés</b></h3>
+            <ul class="items">
+                <li>Conocé más sobre nosotros</li>
+                <li>Preguntas frecuentes</li>
+                <li>Lugares y horarios de atención</li>
+                <li>Proveedores y marcas</li>
+                <li>Trabajá con nosotros</li>
+            </ul>
+        </div>
+    </section>
+    <section class="footer2">
+        <div class="ultimotext">
+           <p>Ayuda Políticas de Uso y Privacidad de Datos </p>   
+            <p>© Copyright Lo Nuestro - 2023 | Todos los derechos reservados. </p>
+        </div>
+        <div class="ultimotext">
+            <h3>SISTEMA DE GESTIÓN DE LA CALIDAD</h3>
+            <p> Certificación conforme a la Norma ISO 9001:2015 en los procesos de:Toma de Lectura, Facturación, Impresión y Entrega de Facturas.</p>
+        </div>
+    </section>
+    </footer>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="../app/main.js"></script>
+
 
 </body>
 </html>

@@ -2,39 +2,59 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
+    font-family: 'Comic Sans MS', sans-serif,monospace,Verdana, Geneva, Tahoma;
 }
 
 
-
+body{
+    background-image: url(../assets/fondos/tabla-cortar.jpg);
+}
+/*------------ HEADER ---------------*/
 .conteiner11{
     background-color: aqua;
     width: 70%;
     max-width: 1200px; 
-    
 }
 
-header div{
-    width: 100%;
+.contenedor-header{ 
+    display: flex;
     background-color: #fffcf5;
-    text-align: center;
-
+    background-image: url(../assets/fondos/madera.jpg);
+    justify-content: center;
+    align-items: center;
 }
+
+.contenedor-header div {
+    margin: 20px;
+}
+
+.botones{
+    position: relative;
+    left: 400px; 
+}
+
+header div button {
+    
+    width: 50px;
+    border-radius: 50%;
+    padding: 10px 0px;
+    border: 0;
+}
+
 header div img{
    max-width: 100%;
    width: 300px;
 }
 
 header nav ul{ 
-   
     display: flex;
     justify-content:space-around;
     align-items: center;
     list-style: none;
-    font-size: 20px;
+    font-size: large;
     padding: 0;
-   background-image:url(https://static5.depositphotos.com/1038117/460/i/600/depositphotos_4608292-stock-photo-texture-fresh-wood-background.jpg);
-   font-weight: 500;
+    background-image:url(../assets/fondos/tablas-blancs.jpg);
+    font-weight: 500;
 }
 header nav ul li a{
     text-decoration: none;
@@ -47,39 +67,34 @@ header nav ul li a{
     text-align: center;
 }
 .nav-sombreado:hover{
-background-color:hsl(51, 70%, 55%) ;
+background-color:rgb(245,227,165);
 transition: 0.2s;
 }
 
+/*------------ MAIN ---------------*/
+main{
+    
+    margin: 0%;
+}
 
+/*------------ MAIN INDEX ---------------*/
 #carouselExampleAutoplaying{
     width: 50%;
     text-align: center;
     display: block;
-    margin: auto;
-   
-    
+    margin: auto; 
 }
 
-p{
-    font-family: 'Neucha', cursive;
-}
 .carousel-inner div img{
     width: 20%;
-    height: 30%;
-   
+    height: 30%; 
 }
 
 .carousel-item{
 transition-duration: 3s;
 }
 
-h2{
-    font-family:cursive;
-}
-
 .contenedor{
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: center ;
@@ -92,31 +107,54 @@ h2{
     margin: 10px;
     border: 5px solid black;
     overflow:auto;
-    animation:rollIn;
+    animation:fadeInUp;
     animation-duration: 3s;
+    background-image: url(../assets/fondos/tablas-blancs.jpg);
 }
+
 .caja img{
-    width: 90%;
-
+    height: 220px;
 }
 
+/*------------ FOOTER ---------------*/
 footer{
     max-width: 100%;
     border: 1px solid black;
+    margin:0%;
 }
 
 .footer1{
-    background-color: #cfd8dc ;
+    background-image: url(../assets/fondos/suelo-blanco.avif);
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
-    
+}
+
+.footer1 .primeracolumna{
+    max-width: 15%;
+    text-align: center;
+    margin-left: 15px;
+    font-size:larger;
+}
+
+.footer1 .logo1{
+    width: 200px;
 }
 
 .icon{
     width: 20px;
 }
-
+.footer1 .segundacolumna{
+    margin-top: 5px;
+    text-align: center;
+}
+.footer1 .segundacolumna h3{
+    font-size: larger;
+    text-decoration: underline;
+}
+.footer1 .items{
+    list-style: none;
+}
 .footer2{
     background-color: #263238;
     color: white;
@@ -125,12 +163,20 @@ footer{
     padding: 25px;
     
 }
-.ultimotext h3{
-    font-size: 12px;
+.ultimotext{
+    text-align: center;
+    max-width: 40%;
+    margin-left: 10px;
 }
-
-
-
+.ultimotext2{
+    max-width: 60%;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 0%;
+}
+.ultimotext2 h3{
+    font-size: 15px;
+}
 
 
 /* Codigo de Aye - Responsive */
@@ -157,11 +203,7 @@ footer{
 
 
 
-
-
 /* Codigo de Josi - Formulario */
-
-
 .form-registro{
     width: 450px;
     margin:auto;
@@ -173,11 +215,11 @@ footer{
     margin-bottom: 20px;
 }
 h2{
-    color: #263238;
+    color: black;
     text-align: center;
     margin: 20px;
     font-size: 60px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Cinzel', serif;
 }
 .control{
     width: 100%;
@@ -212,89 +254,298 @@ h2{
 
 
 
-
-
-/* Codigo de Lau - Grid */
-.titulo {
-    background-image: url(../assets/madera.jpg);
-    font-size: 3rem;
-    width: 80%;  
+/*------------ PRODUCTOS PAGES ---------------*/
+.titulo-principal {
+    background-image: url(../assets/fondos/madera.jpg);
+    font-size: 4rem;
+    width: 100%;  
     margin: 1rem auto;
     text-align: center;
+    font-family: 'Cinzel', serif;
+    color: rgb(0, 0, 0);
+    letter-spacing: 4px;
 }
-
-.grilla {
+.contenedor-productos {
     max-width: 1200px;
     width: 80%;
-    margin: 0 auto;
+    margin: 5rem auto;
     display: grid;
     grid-gap: 15px;
     justify-content: center ;
-    grid-template-areas: "prod1 prod2 prod3"
-                        "prod4 prod5 prod6";
-}
+    grid-template-columns: 1fr 1fr 1fr;
 
-.grilla .producto1 {
-    background-color:rgb(223, 189, 137);
-    grid-area: prod1;
-    text-align: center;
-    border: 5px solid black;
 }
-.grilla .producto1 img {
+#contenedor-productos .producto{
+    border: 2px solid black;
+    width: 350px;
+}
+#contenedor-productos div{
+    background-image: url(../assets/fondos/tablas-blancs.jpg);
+    text-align: center;
+}    
+.producto-imagen {
+    width: 100%;
     height: 280px;
     box-sizing: cover;
-}
-.grilla .producto2 {
-    background-color:rgb(223, 189, 137);
-    grid-area: prod2;
-    text-align: center;
-    border: 5px solid black;
-}
-.grilla .producto2 img {
-    height: 280px;
-    box-sizing: cover;
-}
-.grilla .producto3 {
-    background-color:rgb(223, 189, 137);
-    grid-area: prod3;
-    text-align: center;
-    border: 5px solid black;
-}
+}  
 
-.grilla .producto3 img {
-    height: 280px;
-    box-sizing: cover;
+.producto-agregar{
+box-sizing: border-box;
+background-color: white;
+border: 2px solid  rgb(132,66,5);
+border-radius: 0.6em;
+color: #000000;
+cursor: pointer;
+font-size: 0,5rem;
+padding: 1rem;
+text-align: center;
+text-transform: uppercase;
+font-family: 'Cinzel', serif;
+font-weight: 700;
+margin: 2rem;
 }
-.grilla .producto4 {
-    background-color:rgb(223, 189, 137);
-    grid-area: prod4;
-    text-align: center;
-    border: 5px solid black;
-} 
-.grilla .producto4 img {
-    height: 320px;
-    box-sizing: cover;
-}
-.grilla .producto5 {
-    background-color:rgb(223, 189, 137);
-    grid-area: prod5;
-    text-align: center;
-    border: 5px solid black;
-} 
-.grilla .producto5 img {
-    height: 320px;
-    box-sizing: cover;
-}
-.grilla .producto6 {
-    background-color:rgb(223, 189, 137);
-    grid-area: prod6;
-    text-align: center;
-    border: 5px solid black;
-} 
-.grilla .producto6 img {
-    height: 320px;
-    box-sizing: cover;
-} 
+  .producto-agregar {
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  }
+  .producto-agregar:hover {
+    box-shadow: 0 0 40px 40px  rgb(132,66,5) inset;
+    color:#ffffff
+  }
 
 
+/*------------ WHATSAPP ---------------*/
+.btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 60px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wsp{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
+}
 
+
+/*------------ CARRITO ---------------*/
+
+body{
+    background-color: #20ba5a;
+}
+
+.contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 5rem 10rem;
+    background-color:rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+}
+
+.carrito-vacio,
+.carrito-comprado {
+    padding: 10rem;
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.carrito-productos {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.carrito-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding: .5rem;
+    padding-right: 1.5rem;
+    border-bottom: 1px solid black;
+    
+}
+
+
+
+.carrito-producto-imagen {
+    width: 250px;
+    border-radius: 1rem;
+   
+}
+
+.carrito-producto small {
+    font-size: .75rem;
+}
+
+.carrito-producto-eliminar {
+    width: 5rem;
+    height: 5rem;
+    border: 0;
+    background-color:transparent;
+    color: black;
+    cursor: pointer;
+}
+
+.carrito-producto-eliminar:hover{
+    background-color:hsl(0, 100%, 79%) ;
+    border-radius: 2rem;
+    }
+
+
+
+.carrito-acciones {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem 2rem;
+}
+
+.carrito-acciones-vaciar {
+    
+    background-color: var(--clr-gray);
+    padding: 1rem;
+    border-radius: 2rem;
+    color:black;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    background-color: #fdc781;
+}
+
+
+
+.carrito-acciones-vaciar {
+    background: #fff; /* color de fondo */
+    color: rgb(132,66,5); /* color de fuente */
+    border: 2px solid rgb(132,66,5); /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .carrito-acciones-vaciar:hover {
+    color: #fff; /* color de fuente hover */
+  }
+  .carrito-acciones-vaciar::after {
+    content: "";
+    background: rgb(132,66,5); /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: -100%;
+    bottom: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  .carrito-acciones-vaciar:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+
+
+.carrito-acciones-derecha {
+    display: flex;
+}
+
+.carrito-acciones-total {
+    display: flex;
+    background-color:white;
+    padding: 1rem;
+    color: black;
+    text-transform: uppercase;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    gap: 1rem;
+    font-family: 'Cinzel', serif;
+    border: 2px solid rgb(132,66,5)
+}
+
+.carrito-acciones-comprar {
+    border: 0;
+    padding: 1rem;
+    color: var(--clr-white);
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.carrito-acciones-comprar {
+    background: #fff; /* color de fondo */
+    color: rgb(132,66,5); /* color de fuente */
+    border: 2px solid rgb(132,66,5); /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .carrito-acciones-comprar:hover {
+    color: #fff; /* color de fuente hover */
+  }
+  .carrito-acciones-comprar::after {
+    content: "";
+    background: rgb(132,66,5); /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: -100%;
+    bottom: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  .carrito-acciones-comprar:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+
+
+
+.header-mobile {
+    display: none;
+}
+
+.close-menu {
+    display: none;
+}
+
+.disabled {
+    display: none;
+}
