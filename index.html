@@ -6,28 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <title>Home</title>
+    <script src="https://kit.fontawesome.com/3bc49ffe58.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;1,300&family=Neucha&display=swap" rel="stylesheet">
-<link rel="icon" href="assets/iconos/te-de-mate.ico">
-<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+<link href="https://fonts.googleapis.com/css2?family=Mogra&family=Mulish:ital,wght@0,400;1,300&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="assets/iconos/logo.ico">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     
 </head>
 <body>
     <div class="container11">
     <header>
-        <div class="logo"><img src="assets/logo/logo (1).png" alt=""></div>
-        <nav>
+        <div class="contenedor-header">
+        <div class="logo"><img src="assets/logo/logo.png" alt="logo de la pagina"></div>
+        <div class="botones">
+            
+            <button onclick="location.href='pages/carrito.html'" >
+                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+            </button>
+            <button onclick="location.href='pages/contacto.html'">
+                <i class="fa-sharp fa-regular fa-envelope fa-xl"></i>
+            </button>
+        </div></div>
+        <nav> 
             <ul>
-                <li class="nav-sombreado"><a href="pages/Indumentaria.html">Indumentaria</a></li>
-                <li class="nav-sombreado"><a href="pages/instrumentos.html">Instrumentos musicales</a></li>
-                <li class="nav-sombreado"><a href="pages/gastronomía.html">Gastronomía</a></li>
+                <li class="nav-sombreado" id="indumentaria"><a href="pages/Indumentaria.html">Indumentaria</a></li>
+                <li class="nav-sombreado" id="instrumentos"><a href="pages/instrumentos.html" >Instrumentos musicales</a></li>
+                <li class="nav-sombreado" id="gastronomia"><a href="pages/gastronomia.html">Gastronomía</a></li>
             </ul>
         </nav>
     </header>
@@ -35,13 +46,13 @@
          <div id="carouselExampleAutoplaying" class="carousel side" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="assets/indumentaria/poncho.jpg" class="d-block w-100" alt="...">
+                <img src="assets/slide/s.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="assets/instrumentos/guitarra.jpg" class="d-block w-100" alt="...">
+                <img src="assets/slide/s1.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="assets/gastronomia/alfajor-negro-relleno-de-dulce-de-leche.jpg" class="d-block w-100" alt="...">
+                <img src="assets/slide/s2.jpg" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -55,66 +66,64 @@
           </div>
         
         <section class="contenedor">
-            <div class="caja"><a href="pages/Indumentaria.html"><img src="assets/indumentaria/poncho.jpg" alt=""></a>
+            <div class="caja"><a href="pages/Indumentaria.html"><img src="assets/indumentaria/index.jpg" alt="indumentaria"></a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consequatur soluta quos quis voluptate, vitae natus culpa recusandae accusantium porro. Necessitatibus ipsa repellat quaerat dolor recusandae porro ex nihil debitis.</p></div>
         
-            <div class="caja"><a href="pages/instrumentos.html"><img src="assets/instrumentos/guitarra.jpg" alt=""></a>
+            <div class="caja"><a href="pages/instrumentos.html"><img src="assets/instrumentos/index.jpg" alt="instrumentos"></a>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos et nulla provident deleniti temporibus quo eaque vero? Sint perspiciatis animi asperiores natus vitae tempore ratione ipsam expedita. Excepturi, pariatur cumque!</p></div>
        
        
-            <div class="caja"><a href="pages/gastronomía.html"><img src="assets/gastronomia/alfajor-negro-relleno-de-dulce-de-leche.jpg" alt=""></a>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nihil eum facilis delectus assumenda exercitationem, vitae quis mollitia sed praesentium odit, maiores adipisci cumque dicta magni, animi deleniti? Commodi, et?</p></div>
+            <div class="caja"><a href="pages/gastronomia.html"><img src="assets/gastronomia/index.jpg" alt="gastronomia"></a>
+            <p>Loremy ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nihil eum facilis delectus assumenda exercitationem, vitae quis mollitia sed praesentium odit, maiores adipisci cumque dicta magni, animi deleniti? Commodi, et?</p></div>
         </section>
-        
+        <a href="https://api.whatsapp.com/send?phone=5403755647058&text=Hola!%20Esteban%20es%20un%20GENIO!" class="btn-wsp" target="_blank">
+            <i class="fa fa-whatsapp icono"></i>
+        </a>
     </main>
     
 
     <footer>
         <section class="footer1">
-        <div>
-            <h3><img class="icon" src="assets/iconos/telefono.svg" alt="Contacto"> <b>Contacto</b></h3>
-            <ul>
-                <li>Teléfono:</li>
-                <li>Email:</li>
-                <li>SMS:</li>
-                <li>Dirección:</li>
-            </ul>
-        </div>
-        <div>
-            <h3><img class="icon" src="assets/iconos/clip.svg" alt="Contacto"> <b>De interés
-            </b></h3>
-            <ul>
-                <li>Reglamento general</li>
-                <li>Preguntas frecuente</li>
-                <li>Línea ética</li>
-                <li>Lugares y horarios de atención</li>
-                <li>Trabajá con nosotros</li>
-            </ul>
-        </div>
-        <div>
-            <h3><img class="icon" src="assets/iconos/principal.svg" alt="Contacto"> <b>Acceso principales</b></h3>
-            <ul>
-                <li>Mi cuenta</li>
-                <li>Canales de contacto</li>
-                <li>Proveedores</li>
-                <li>Protocolos</li>
-            </ul>
-        </div>
-    </section>
-    <section class="footer2">
-        <div>
-           <p>Ayuda     Políticas de Uso y Privacidad de Datos </p>   
-            <p>© 2020 Copyright EDET S.A - Empresa de Distribución Eléctrica de Tucumán S.A.</p>
-        </div>
-        <div class="ultimotext">
-            <h3>SISTEMA DE GESTIÓN DE LA CALIDAD</h3>
-            <p> Certificación conforme a la Norma ISO 9001:2015 en los procesos de:Toma de Lectura, Facturación, Impresión y Entrega de Facturas.
-                </p>
-        </div>
-    </section>
+            <div class="primeracolumna">
+                <img class="logo1" src="assets/logo/logo.png" alt="logo"> 
+                <img class="icon" src="assets/iconos/facebook.ico" alt="Facebook"> 
+                <img class="icon" src="assets/iconos/Instagram.ico" alt="Instagram"> 
+                <p><i><b>Lo Nuestro</b></i></p>
+            </div>    
+            <div class="segundacolumna">
+                <h3><img class="icon" src="assets/iconos/telefono.svg" alt="Contacto"> <b>Contacto</b></h3>
+                <ul class="items">
+                    <li>Tandil - Buenos Aires - Argentina</li>
+                    <li>Sucursal | Payro 871</li>
+                    <li>Tel.: 249 401 0150</li>
+                    <li>Correo: lo.nuestro@gmail.com</li>
+                </ul>
+            </div>
+            <div class="segundacolumna">
+                <h3><img class="icon" src="assets/iconos/clip.svg" alt="interes"> <b>Información de interés</b></h3>
+                <ul class="items">
+                    <li>Conocé más sobre nosotros</li>
+                    <li>Preguntas frecuentes</li>
+                    <li>Lugares y horarios de atención</li>
+                    <li>Proveedores y marcas</li>
+                    <li>Trabajá con nosotros</li>
+                </ul>
+            </div>
+        </section>
+        <section class="footer2">
+            <div class="ultimotext">
+                <p>Ayuda Políticas de Uso y Privacidad de Datos </p>   
+                <p>© Copyright Lo Nuestro - 2023 | Todos los derechos reservados. </p>
+            </div>
+            <div class="ultimotext2">
+                <h3>SISTEMA DE GESTIÓN DE LA CALIDAD</h3>
+                <p> Certificación conforme a la Norma ISO 9001:2015 en los procesos de:Toma de Lectura, Facturación, Impresión y Entrega de Facturas.</p>
+            </div>
+        </section>
     </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="./app/main.js"></script>
 </body>
 </html>

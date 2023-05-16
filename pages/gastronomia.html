@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="https://kit.fontawesome.com/3bc49ffe58.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" 
+    crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/iconos/logo.ico">
+    <title>Gastronomia</title>
+</head>
+<body>
+    
+    <header>
+        <div class="contenedor-header">
+            <div class="logo"><img src="../assets/logo/logo.png" alt="logo"></div>
+            <div class="botones">
+                
+                <button onclick="location.href='carrito.html'" >
+                    <i class="fa-solid fa-cart-shopping fa-xl"></i><span id="numerito" class="numerito">0</span>
+                </button>
+                <button onclick="location.href='contacto.html'">
+                    <i class="fa-sharp fa-regular fa-envelope fa-xl"></i>
+                </button>
+            </div></div>
+        <nav>
+            <ul>
+                <li class="inicio"><a href="../index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="titulo-principal" id="titulo-principal">Gastronomía</h2>
+
+        <div class="contenedor-productos" id="contenedor-productos"><!--antes era "grilla"!-->
+           <!--se rellena con js!-->
+        </div>
+   </main> 
+   
+   <footer>
+    <section class="footer1">
+        <div class="primeracolumna">
+            <img class="logo1" src="../assets/logo/logo.png" alt="logo"> 
+            <img class="icon" src="../assets/iconos/facebook.ico" alt="Facebook"> 
+            <img class="icon" src="../assets/iconos/Instagram.ico" alt="Instagram"> 
+            <p><i><b>Lo Nuestro</b></i></p>
+        </div>    
+        <div class="segundacolumna">
+            <h3><img class="icon" src="../assets/iconos/telefono.svg" alt="Contacto"> <b>Contacto</b></h3>
+            <ul class="items">
+                <li>Tandil - Buenos Aires - Argentina</li>
+                <li>Sucursal | Payro 871</li>
+                <li>Tel.: 249 401 0150</li>
+                <li>Correo: lo.nuestro@gmail.com</li>
+            </ul>
+        </div>
+        <div class="segundacolumna">
+            <h3><img class="icon" src="../assets/iconos/clip.svg" alt="interes"> <b>Información de interés</b></h3>
+            <ul class="items">
+                <li>Conocé más sobre nosotros</li>
+                <li>Preguntas frecuentes</li>
+                <li>Lugares y horarios de atención</li>
+                <li>Proveedores y marcas</li>
+                <li>Trabajá con nosotros</li>
+            </ul>
+        </div>
+    </section>
+    <section class="footer2">
+        <div class="ultimotext">
+           <p>Ayuda Políticas de Uso y Privacidad de Datos </p>   
+            <p>© Copyright Lo Nuestro - 2023 | Todos los derechos reservados. </p>
+        </div>
+        <div class="ultimotext">
+            <h3>SISTEMA DE GESTIÓN DE LA CALIDAD</h3>
+            <p> Certificación conforme a la Norma ISO 9001:2015 en los procesos de:Toma de Lectura, Facturación, Impresión y Entrega de Facturas.</p>
+        </div>
+    </section>
+    </footer>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="../app/main.js"></script>
+
+
+</body>
+</html>
