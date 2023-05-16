@@ -29,8 +29,10 @@ body{
 }
 
 .botones{
-    position: relative;
-    left: 400px; 
+    position:fixed; /*agrege esto */
+    /*position: relative;*/ /*esto estaba orginal*/
+    /*left: 400px; */
+    right:0px;
 }
 
 header div button {
@@ -265,7 +267,7 @@ h2{
     color: rgb(0, 0, 0);
     letter-spacing: 4px;
 }
-.contenedor-productos {
+/* .contenedor-productos {
     max-width: 1200px;
     width: 80%;
     margin: 5rem auto;
@@ -274,7 +276,48 @@ h2{
     justify-content: center ;
     grid-template-columns: 1fr 1fr 1fr;
 
-}
+} */
+
+/*responsive pages of product */
+@media only screen and (max-width:600px) /* and (max-width:768px){*/
+    {
+    .contenedor-productos {
+        max-width: 600px;
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 15px;
+        justify-content: center ;
+        grid-template-columns: 1fr;   
+    }
+    }
+     @media only screen and (min-width:600px)  
+        {
+        .contenedor-productos {
+            max-width: 768px;
+            width: 80%;
+            margin: 0 auto;
+            display: grid;
+            grid-gap: 15px;
+            justify-content: center ;
+            grid-template-columns: 1fr 1fr;   
+        }
+        }
+    @media only screen and (min-width:768px) 
+    {
+    .contenedor-productos {
+        max-width: 1200px;
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 15px;
+        justify-content: center ;
+        grid-template-columns: 1fr 1fr 1fr;   
+    }
+    }     
+  /*End responsive pages of product */
+  
+
 #contenedor-productos .producto{
     border: 2px solid black;
     width: 350px;
