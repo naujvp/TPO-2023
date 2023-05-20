@@ -272,3 +272,59 @@ function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
+
+
+/*Validacion de formulario por js */
+    (function(){
+    var formulario = document.getElementsByName('formulario-contanto')[0],
+        elementos = formulario.elements,
+        boton = document.getElementById('btn');
+    /* //formulario.nombres.value='juan'
+    console.log(formulario.nombres.value);
+    var ref= formulario.correo.value = 'juan@gmail.com';
+    var filtro=ref.indexOf('@gmail.com') ;
+    console.log(filtro);
+  */   
+    var validarNombre = function(e){
+        if (formulario.nombres.value == 0){
+            alert("Ingresa tu nombre por favor.");
+            e.preventDefault();
+            //https://www.w3schools.com/jsref/event_preventdefault.asp
+            //Evita que un enlace abra la URL
+                }
+            };
+    var validarApellidos = function(e){
+        if (formulario.apellidos.value == 0){
+            alert("Ingresa tu apellido por favor");
+            e.preventDefault();
+            //https://www.w3schools.com/jsref/event_preventdefault.asp
+            //Evita que un enlace abra la URL
+                }
+            };
+    var validarCorreo = function(e){
+        var gmail = formulario.correo.value.indexOf('@gmail.com')
+        var hotmail = formulario.correo.value.indexOf('@hotmail.com')
+        var yahoo = formulario.correo.value.indexOf('@yahoo.com') 
+        if (formulario.correo.value == 0){
+            alert("Ingresa un correo por favor");
+            e.preventDefault();
+            //https://www.w3schools.com/jsref/event_preventdefault.asp
+            //Evita que un enlace abra la URL
+                }
+        else if ((gmail == -1 && hotmail == -1 && yahoo == -1)){
+            alert("Ingresa un correo valido por favor, Ej: juan_xx@gmail.com o ayelen@hotmail.com o josi@yahoo.com o laura_q@gmail.com, etc");
+            e.preventDefault();
+            //https://www.w3schools.com/jsref/event_preventdefault.asp
+            //Evita que un enlace abra la URL
+                }
+
+            };        
+
+    var validar = function(e){
+            validarNombre(e);
+            validarApellidos(e);
+            validarCorreo(e);s
+        };
+    formulario.addEventListener("submit", validar);
+   }())
+    

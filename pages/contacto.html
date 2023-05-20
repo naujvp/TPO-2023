@@ -11,7 +11,7 @@
     <title>Contacto</title>
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+    <script src="../app/main.js"></script>
 </head>
 <body>
     <!-- En esta pagina usamos formulario y API (captcha) -->
@@ -27,14 +27,15 @@
     </header>
     <main > 
         <h2>Contacto</h2>
-    
-<form action="https://formsubmit.co/regionales.lonuestro@gmail.com" method="POST">
+<!--     //  action="https://formsubmit.co/regionales.lonuestro@gmail.com" method="POST"
+ -->
+ <form name="formulario-contanto" action="https://formsubmit.co/regionales.lonuestro@gmail.com" method="POST">
 
  <section class="form-registro">
         <input class="control" type="text" name="nombres" id="nombres" placeholder="Nombres">
         <input class="control" type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
         <input class="control" type="text" name="correo" id="correo" placeholder="Correo electronico *">
-        <input class="control" type="text" name="telefono" id="telefono" placeholder="Numero de telefono">
+    <!--<input class="control" type="text" name="telefono" id="telefono" placeholder="Numero de telefono"> -->
         <textarea class="mensaje" name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
         
        <!-- Este es el ReCaptcha -->
@@ -42,13 +43,68 @@
             <div class="g-recaptcha" data-sitekey="6Ld409wlAAAAANHZn8Benk2IvQeHjL6-EXjY9lpm"></div>
             <br/>
         </form>
-                <input class="boton" type="submit" value="Enviar">
-        <input type="hidden" name="_next" value="https://naujvp.github.io/TPO-2023/">
+                <input name="btn" class="boton" type="submit" value="Enviar">
+         <input type="hidden" name="_next" value="https://naujvp.github.io/TPO-2023/">
         <input type="hidden" name="_captcha" value="false">
        </section>
     </form>
- 
+ <!--Validacion de formulario por js -->
+<!-- <script>
+    (function(){
+    var formulario = document.getElementsByName('formulario-contanto')[0],
+        elementos = formulario.elements,
+        boton = document.getElementById('btn');
+    /* //formulario.nombres.value='juan'
+    console.log(formulario.nombres.value);
+    var ref= formulario.correo.value = 'juan@gmail.com';
+    var filtro=ref.indexOf('@gmail.com') ;
+    console.log(filtro);
+  */   
+    var validarNombre = function(e){
+        if (formulario.nombres.value == 0){
+            alert("Ingresa tu nombre por favor.");
+            e.preventDefault();
+            //https://www.w3schools.com/jsref/event_preventdefault.asp
+            //Evita que un enlace abra la URL
+                }
+            };
+    var validarApellidos = function(e){
+        if (formulario.apellidos.value == 0){
+            alert("Ingresa tu apellido por favor");
+            e.preventDefault();
+            //https://www.w3schools.com/jsref/event_preventdefault.asp
+            //Evita que un enlace abra la URL
+                }
+            };
+    var validarCorreo = function(e){
+        var gmail = formulario.correo.value.indexOf('@gmail.com')
+        var hotmail = formulario.correo.value.indexOf('@hotmail.com')
+        var yahoo = formulario.correo.value.indexOf('@yahoo.com') 
+        if (formulario.correo.value == 0){
+            alert("Ingresa un correo por favor");
+            e.preventDefault();
+            //https://www.w3schools.com/jsref/event_preventdefault.asp
+            //Evita que un enlace abra la URL
+                }
+        else if ((gmail == -1 && hotmail == -1 && yahoo == -1)){
+            alert("Ingresa un correo valido por favor, Ej: juan_xx@gmail.com o ayelen@hotmail.com o josi@yahoo.com o laura_q@gmail.com, etc");
+            e.preventDefault();
+            //https://www.w3schools.com/jsref/event_preventdefault.asp
+            //Evita que un enlace abra la URL
+                }
 
+            };        
+
+    var validar = function(e){
+            validarNombre(e);
+            validarApellidos(e);
+            validarCorreo(e);
+            //validarRadio(e);
+            //validarCheckbox(e);
+        };
+    formulario.addEventListener("submit", validar);
+   }())
+    </script> -->
     </main>
     <footer>
         <section class="footer1">
