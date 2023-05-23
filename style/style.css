@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Comic Sans MS', sans-serif,monospace,Verdana, Geneva, Tahoma;
+    font-family: 'Itim', sans-serif,monospace,Verdana, Geneva, Tahoma;
 }
 
 
@@ -29,8 +29,10 @@ body{
 }
 
 .botones{
-    position: relative;
-    left: 400px; 
+    position:fixed; /*agrege esto */
+    /*position: relative;*/ /*esto estaba orginal*/
+    /*left: 400px; */
+    right:0px;
 }
 
 header div button {
@@ -39,6 +41,8 @@ header div button {
     border-radius: 50%;
     padding: 10px 0px;
     border: 0;
+    background-color: rgb(245,227,165) ;
+    border: solid 1px rgb(0, 0, 0);
 }
 
 header div img{
@@ -59,6 +63,7 @@ header nav ul{
 header nav ul li a{
     text-decoration: none;
     color: black;
+    font-size: 120%;
 }
 .nav-sombreado{
     padding: 8px 12px ;
@@ -79,10 +84,10 @@ main{
 
 /*------------ MAIN INDEX ---------------*/
 #carouselExampleAutoplaying{
-    width: 50%;
+    width: 55%;
     text-align: center;
     display: block;
-    margin: auto; 
+    margin: 50px auto; 
 }
 
 .carousel-inner div img{
@@ -98,7 +103,7 @@ transition-duration: 3s;
     display: flex;
     flex-wrap: wrap;
     justify-content: center ;
-    margin: 20px 0;
+    margin: 80px 0;
 }
 .caja{
     width: 30%;
@@ -113,7 +118,7 @@ transition-duration: 3s;
 }
 
 .caja img{
-    height: 220px;
+    width: 100%;
 }
 
 /*------------ FOOTER ---------------*/
@@ -131,8 +136,7 @@ footer{
 }
 
 .footer1 .primeracolumna{
-    max-width: 15%;
-    text-align: center;
+    max-width: 8%;
     margin-left: 15px;
     font-size:larger;
 }
@@ -143,9 +147,10 @@ footer{
 
 .icon{
     width: 20px;
+ 
 }
 .footer1 .segundacolumna{
-    margin-top: 5px;
+    margin-top: 20px;
     text-align: center;
 }
 .footer1 .segundacolumna h3{
@@ -207,7 +212,7 @@ footer{
 .form-registro{
     width: 450px;
     margin:auto;
-    background-color: rgba(0, 0, 0, 0.4) ;
+    background-color: rgba(248, 246, 246, 1) ;
     padding: 10px 20px;
     box-sizing: border-box;
     margin-top: 20px;
@@ -230,6 +235,8 @@ h2{
     font-size: 17px;
     font-family: monospace;
 }
+
+/*
 .mensaje{
     min-height: 100px;
     max-height: 200px;
@@ -237,6 +244,7 @@ h2{
     font-size: 17px;
     min-width: 100%;
 }
+
 .boton{
     background-color: #60afa5;
     color: #fff;
@@ -250,14 +258,48 @@ h2{
     cursor: pointer;
     zoom: 105%;
     background-color: #80bdb5;
+}*/
+
+.contol.nombres{
+    border: solid 5px green;
+
+}
+
+#warnings.warnings{
+   display: inline;
+}
+
+.warnings{
+    font-size: 11px;
+    text-align: center;
+    color: red;
+}
+
+
+.boton_enviar {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: rgb(132,66,5);
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+    margin-left: 150px;
+}
+
+.boton_enviar:hover {
+	box-shadow: 3px 0px 30px rgb(62, 61, 59);
 }
 
 
 
 /*------------ PRODUCTOS PAGES ---------------*/
 .titulo-principal {
-    background-image: url(../assets/fondos/madera.jpg);
-    font-size: 4rem;
+   /* background-image: url(../assets/fondos/madera.jpg);*/
+    font-size: 200%;
     width: 100%;  
     margin: 1rem auto;
     text-align: center;
@@ -265,16 +307,59 @@ h2{
     color: rgb(0, 0, 0);
     letter-spacing: 4px;
 }
+
+/*
 .contenedor-productos {
     max-width: 1200px;
     width: 80%;
-    margin: 5rem auto;
+    margin: 20rem 20rem;
     display: grid;
     grid-gap: 15px;
     justify-content: center ;
     grid-template-columns: 1fr 1fr 1fr;
 
-}
+} */
+
+/*responsive pages of product */
+@media only screen and (max-width:600px) /* and (max-width:768px){*/
+    {
+    .contenedor-productos {
+        max-width: 600px;
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 15px;
+        justify-content: center ;
+        grid-template-columns: 1fr;   
+    }
+    }
+     @media only screen and (min-width:600px)  
+        {
+        .contenedor-productos {
+            max-width: 768px;
+            width: 80%;
+            margin: 0 auto;
+            display: grid;
+            grid-gap: 15px;
+            justify-content: center ;
+            grid-template-columns: 1fr 1fr;   
+        }
+        }
+    @media only screen and (min-width:768px) 
+    {
+    .contenedor-productos {
+        max-width: 1200px;
+        width: 80%;
+        margin: 5rem auto;
+        display: grid;
+        grid-gap: 15px;
+        justify-content: center ;
+        grid-template-columns: 1fr 1fr 1fr;   
+    }
+    }     
+  /*End responsive pages of product */
+  
+
 #contenedor-productos .producto{
     border: 2px solid black;
     width: 350px;
@@ -353,7 +438,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    margin: 5rem 10rem;
+    margin: 10rem 10rem;
     background-color:rgba(255, 255, 255, 0.8);
     border-radius: 1rem;
 }
@@ -434,22 +519,22 @@ body{
 
 
 .carrito-acciones-vaciar {
-    background: #fff; /* color de fondo */
-    color: rgb(132,66,5); /* color de fuente */
-    border: 2px solid rgb(132,66,5); /* tamaño y color de borde */
+    background: #fff; 
+    color: rgb(132,66,5); 
+    border: 2px solid rgb(132,66,5); 
     padding: 16px 20px;
-    border-radius: 3px; /* redondear bordes */
+    border-radius: 3px; 
     position: relative;
     z-index: 1;
     overflow: hidden;
     display: inline-block;
   }
   .carrito-acciones-vaciar:hover {
-    color: #fff; /* color de fuente hover */
+    color: #fff; 
   }
   .carrito-acciones-vaciar::after {
     content: "";
-    background: rgb(132,66,5); /* color de fondo hover */
+    background: rgb(132,66,5); 
     position: absolute;
     z-index: -1;
     padding: 16px 20px;
@@ -500,18 +585,18 @@ body{
 }
 
 .carrito-acciones-comprar {
-    background: #fff; /* color de fondo */
-    color: rgb(132,66,5); /* color de fuente */
-    border: 2px solid rgb(132,66,5); /* tamaño y color de borde */
+    background: #fff; 
+    color: rgb(132,66,5);
+    border: 2px solid rgb(132,66,5); 
     padding: 16px 20px;
-    border-radius: 3px; /* redondear bordes */
+    border-radius: 3px; 
     position: relative;
     z-index: 1;
     overflow: hidden;
     display: inline-block;
   }
   .carrito-acciones-comprar:hover {
-    color: #fff; /* color de fuente hover */
+    color: #fff; 
   }
   .carrito-acciones-comprar::after {
     content: "";

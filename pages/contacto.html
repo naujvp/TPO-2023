@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
-    <title>Contacto</title>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Cinzel:wght@500&family=Itim&display=swap" rel="stylesheet">
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <title>Contacto</title>
 
 </head>
 <body>
-    <!-- En esta pagina usamos formulario y API (captcha) -->
     <header>
         <div class="contenedor-header">
             <div class="logo"><img src="../assets/logo/logo.png" alt="logo"></div>
@@ -27,28 +27,31 @@
     </header>
     <main > 
         <h2>Contacto</h2>
-    
-<form action="https://formsubmit.co/regionales.lonuestro@gmail.com" method="POST">
+        <form action="https://formsubmit.co/regionales.lonuestro@gmail.com" method="POST" id="form" >
+           
+            <section class="form-registro">
+                   <input class="control" type="text" name="nombres" id="nombres"  placeholder="Nombres">
+                 
+                   <input class="control" type="text" name="apellidos" id="apellidos"  placeholder="Apellidos">
+                   <input class="control" type="text" name="correo" id="correo"  placeholder="Correo electronico *">
+                   <input class="control" type="text" name="telefono" id="telefono"  placeholder="Numero de telefono">
+                   <textarea class="mensaje" name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
+                   
+     
+                   <form action="?" method="POST" class="recaptcha"> 
+                       <div class="g-recaptcha" data-sitekey="6Ld409wlAAAAANHZn8Benk2IvQeHjL6-EXjY9lpm"></div>
+                       <br/>
+                   </form>
+                           <input id="boton_enviar" class="boton_enviar" type="submit" value="Enviar">
+                           <div>
+                           <p class="warnings" id="warnings" ></p>
+                        </div>
+                   <input type="hidden" name="_next" value="https://naujvp.github.io/TPO-2023/">
+                   <input type="hidden" name="_captcha" value="false">
+                  </section>
 
- <section class="form-registro">
-        <input class="control" type="text" name="nombres" id="nombres" placeholder="Nombres">
-        <input class="control" type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
-        <input class="control" type="text" name="correo" id="correo" placeholder="Correo electronico *">
-        <input class="control" type="text" name="telefono" id="telefono" placeholder="Numero de telefono">
-        <textarea class="mensaje" name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
-        
-       <!-- Este es el ReCaptcha -->
-        <form action="?" method="POST" class="recaptcha"> 
-            <div class="g-recaptcha" data-sitekey="6Ld409wlAAAAANHZn8Benk2IvQeHjL6-EXjY9lpm"></div>
-            <br/>
-        </form>
-                <input class="boton" type="submit" value="Enviar">
-        <input type="hidden" name="_next" value="https://naujvp.github.io/TPO-2023/">
-        <input type="hidden" name="_captcha" value="false">
-       </section>
-    </form>
- 
 
+               </form>
     </main>
     <footer>
         <section class="footer1">
@@ -89,5 +92,6 @@
             </div>
         </section>
         </footer>
+        <script src="../app/formulario.js" ></script>
 </body>
 </html>

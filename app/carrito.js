@@ -83,6 +83,8 @@ function eliminarDelCarrito(e) {
 
 }
 
+
+//Aviso que se muestra al vaciar el carrito.
 botonVaciar.addEventListener("click", vaciarCarrito);
 function vaciarCarrito() {
 

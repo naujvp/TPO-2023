@@ -208,28 +208,7 @@ let productoCat = localStorage.getItem("productos-categorizados");
 
 
 mostrarProductos(productoCat);    
-  /*  contenedorProductos.innerHTML = "";
-
-    productoCat.forEach(producto => {
-     console.log(productoCat);
-        const div = document.createElement("div");
-        div.classList.add("producto");
-        div.innerHTML = `
-            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
-            <div class="producto-detalles">
-                <h3 class="producto-titulo">${producto.titulo}</h3>
-                <p class="producto-precio">$${producto.precio}</p>
-                <button class="producto-agregar" id="${producto.id}">Agregar</button>
-            </div>
-        `;
-
-        contenedorProductos.append(div);
-    })
-
-    actualizarBotonesAgregar();
-
-        */
-
+ 
 function actualizarBotonesAgregar() {
     botonesAgregar = document.querySelectorAll(".producto-agregar");
 
@@ -272,3 +251,5 @@ function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
+
+
